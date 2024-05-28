@@ -271,8 +271,8 @@ namespace Microsoft.Exchange.WebServices.Data
         /// <returns>The value of the User-agent HTTP header. The default value is null.The value for this property is stored in <see cref="T:System.Net.WebHeaderCollection"/>. If WebHeaderCollection is set, the property value is lost.</returns>
         string IEwsHttpWebRequest.UserAgent
         {
-            get { return this.request.UserAgent; }
-            set { this.request.UserAgent = value; }
+            get { return this.request.Headers["User-Agent"]; }
+            set { this.request.Headers["User-Agent"] = value; }
         }
 
         /// <summary>

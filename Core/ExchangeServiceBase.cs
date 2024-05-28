@@ -142,7 +142,7 @@ namespace Microsoft.Exchange.WebServices.Data
             request.Timeout = this.Timeout;
             this.SetContentType(request);
             request.Method = "POST";
-            request.UserAgent = this.UserAgent;
+            request.Headers["User-Agent"] = this.UserAgent;
             request.AllowAutoRedirect = allowAutoRedirect;
             request.CookieContainer = this.CookieContainer;
             request.KeepAlive = this.keepAlive;
